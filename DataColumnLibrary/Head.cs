@@ -15,9 +15,9 @@ namespace DataColumnLibrary
             return $"Name: {Name}, Description: {Description}, Formula: {Formula}, Unit: {Unit}";
         }
 
-        public string ToFormatString()
+        public string ToFormatString(int width = 100)
         {
-            StringBuilderPlus sb = new StringBuilderPlus();
+            StringBuilderPlus sb = new StringBuilderPlus(){Width = width};
             sb.AppendLine(sb.Hr());
             sb.AppendLine(sb.CenterJust($"Name: {Name}"));
             sb.AppendLine(sb.LJust($"Descr: {Description}",1));
